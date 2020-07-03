@@ -1,0 +1,20 @@
+{
+  "name": "yarn-audit-action",
+  "version": "0.0.1",
+  "description": "To run yarn audit via Github Actions and create a Github Issue if high severity issues are identified",
+  "main": "index.js",
+  "repository": "https://github.com/pragatheeswarans/yarn-audit-action",
+  "author": "pragatheeswarans <pragatheeswaransornarajan@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "node_modules/.bin/ncc build index.js"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/exec": "^1.0.4",
+    "@actions/github": "^4.0.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.3"
+  }
+}

@@ -1,0 +1,29 @@
+name: 'Yarn Audit'
+description: 'To run yarn audit command for your project and create a Github issue if high severity issues are found'
+inputs:
+  token:
+    description: 'Your GITHUB_TOKEN to authenticate to list & create Issues'
+    required: true
+  label:
+    description: 'A unique label associated to Yarn Audit issues so that the issues can be filterd to prevent creating duplicate issues'
+    required: true
+    default: 'audit-issues'
+  paths:
+    description: 'An multi-line string of paths where audit command should be run. Add "." for current directory'
+    required: false
+    default: |
+      .
+  title:
+    description: 'Issue title'
+    required: false
+    default: 'Yarn Audit Security Issue'
+  description:
+    description: 'Issue description'
+    required: false
+    default: 'There are some high priority issues with your packages. Please check them.'
+  assignee:
+    description: 'The assignee to which the issue has to be assigned'
+    required: false
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
