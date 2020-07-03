@@ -1,5 +1,8 @@
 name: 'Yarn Audit'
 description: 'To run yarn audit command for your project and create a Github issue if high severity issues are found'
+branding:
+  icon: 'shield'
+  color: 'green'
 inputs:
   token:
     description: 'Your GITHUB_TOKEN to authenticate to list & create Issues'
